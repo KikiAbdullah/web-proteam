@@ -9,12 +9,12 @@
 
 'use strict';
 
-(function ($) {
+(function($) {
 
     /*------------------
         Preloader
     --------------------*/
-    $(window).on('load', function () {
+    $(window).on('load', function() {
         $(".loader").fadeOut();
         $("#preloder").delay(200).fadeOut("slow");
     });
@@ -22,18 +22,18 @@
     /*------------------
         Background Set
     --------------------*/
-    $('.set-bg').each(function () {
+    $('.set-bg').each(function() {
         var bg = $(this).data('setbg');
         $(this).css('background-image', 'url(' + bg + ')');
     });
 
     //Canvas Menu
-    $(".canvas__open").on('click', function () {
+    $(".canvas__open").on('click', function() {
         $(".offcanvas-menu-wrapper").addClass("active");
         $(".offcanvas-menu-overlay").addClass("active");
     });
 
-    $(".offcanvas-menu-overlay").on('click', function () {
+    $(".offcanvas-menu-overlay").on('click', function() {
         $(".offcanvas-menu-wrapper").removeClass("active");
         $(".offcanvas-menu-overlay").removeClass("active");
     });
@@ -63,13 +63,13 @@
         autoHeight: false,
         autoplay: true,
         mouseDrag: false,
-        onInitialized: function (e) {
+        onInitialized: function(e) {
             var a = this.items().length;
             $("#snh-1").html("<span>01</span><span>" + "0" + a + "</span>");
             var presentage = Math.round((100 / a));
             $('.slider__progress span').css("width", presentage + "%");
         }
-    }).on("changed.owl.carousel", function (e) {
+    }).on("changed.owl.carousel", function(e) {
         var b = --e.item.index,
             a = e.item.count;
         $("#snh-1").html("<span> " + "0" + (1 > b ? b + a : b > a ? b - a : b) + "</span><span>" + "0" + a + "</span>");
@@ -120,8 +120,8 @@
         asNavFor: '.testimonial__client',
         prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"><i></i></i></button>',
         nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"><i></i></i></button>',
-      });
-      $('.testimonial__client').slick({
+    });
+    $('.testimonial__client').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         asNavFor: '.testimonial__carousel',
@@ -129,24 +129,23 @@
         variableWidth: true,
         centerMode: true,
         focusOnSelect: true,
-        responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 3,
-              }
+        responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                }
             },
             {
-              breakpoint: 575,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                variableWidth: false
-              }
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: false
+                }
             }
-          ]
-        
-      });
+        ]
+
+    });
 
     /*---------------------------------
         Logo Carousel
@@ -176,13 +175,13 @@
     /*------------------
         Counter
     --------------------*/
-    $('.count').each(function () {
+    $('.count').each(function() {
         $(this).prop('Counter', 0).animate({
             Counter: $(this).text()
         }, {
             duration: 4000,
             easing: 'swing',
-            step: function (now) {
+            step: function(now) {
                 $(this).text(Math.ceil(now));
             }
         });

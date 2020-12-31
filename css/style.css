@@ -330,7 +330,9 @@ ol {
     padding: 30px 0 30px;
 }
 
-.header__logo a {
+.header__logo img {
+    margin: 20px;
+    max-width: 60%;
     display: inline-block;
 }
 
@@ -1347,12 +1349,25 @@ ol {
     margin-bottom: 30px;
 }
 
+.footer__logo {
+    min-height: 100px;
+}
+
+.footer__about .footer__logo h4 {
+    color: red;
+    font-weight: 500;
+}
+
 .footer__about .footer__logo {
     margin-bottom: 24px;
 }
 
 .footer__about .footer__logo a {
     display: inline-block;
+}
+
+.footer__about a {
+    color: #707070;
 }
 
 .footer__about p {
@@ -1603,6 +1618,11 @@ ol {
     font-size: 15px;
     line-height: 36px;
     list-style: none;
+}
+
+.services__item img {
+    max-height: 50px;
+    margin: 10px;
 }
 
 .services__item {
@@ -2653,6 +2673,9 @@ ol {
 /* Tablet Device = 768px */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .header__logo img {
+        max-width: 30%;
+    }
     .hero__slider.owl-carousel .owl-nav button {
         left: 0;
     }
@@ -2792,6 +2815,9 @@ ol {
 /* Wide Mobile = 480px */
 
 @media only screen and (max-width: 767px) {
+    .header__logo img {
+        max-width: 30%;
+    }
     .hero__text h2 {
         font-size: 34px;
         line-height: 45px;
