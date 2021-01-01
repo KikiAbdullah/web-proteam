@@ -935,6 +935,7 @@ ol {
 .logo__carousel.owl-carousel .owl-item img {
     display: inline-block;
     width: auto;
+    height: 70px;
 }
 
 .logo__carousel .logo__carousel__item {
